@@ -1,0 +1,414 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Get Your Style On!</title>
+  <link href="https://fonts.googleapis.com/css?family=Prata:300,400,700,800" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+
+    <style>
+        body {
+          color: #464646;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: normal;
+          font-family: "Prata";
+        }
+
+        .modal-content {
+          border-radius: 0;
+        }
+
+        .lg-text {
+          font-size: 167px; 
+          line-height: 239px; 
+          letter-spacing: 
+          -4.3px;
+        }
+
+        .md-text {
+          font-size: 82px; 
+          line-height: 117px; 
+          letter-spacing: 6.6px;
+        }
+
+        .s-md-text {
+          font-size: 65px;
+          line-height: 85px; 
+          letter-spacing: 13px;
+        }
+
+        .s-text {
+          font-size: 28px; 
+          line-height: 40px; 
+          letter-spacing: 2.2px;
+        }
+
+        .p-input {
+          border: none;
+          border-bottom: 3px solid #464646;
+          outline: none;
+          font-size: 15px;
+          line-height: 16px;
+          font-family: PT Sans;
+          font-weight: bold;
+          color: #464646;
+          letter-spacing: 3px;
+          padding-bottom: 12px;
+        }
+
+        .p-btn {
+          border: none;
+          border-bottom: 3px solid #FD8C94;
+          color: #FD8C94;
+          outline: none;
+          background: transparent;
+          font-size: 15px;
+          line-height: 16px;
+          font-family: PT Sans;
+          font-weight: bold;
+          letter-spacing: 3px;
+          padding-bottom: 12px;
+        }
+
+        .dot {
+          border-radius: 50%;
+          width: 10px; 
+          height: 10px;
+          background-color: #E9E9E9;
+          padding: 0 1.5px;
+        }
+
+        .bw-line {
+          height: 100%;
+          width: 1px;
+          background: linear-gradient(
+            to bottom,
+            #E9E9E9 30%,
+            transparent 30% 70%,
+            #E9E9E9 70%
+          );          
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 60%;
+          transform: translateX(-50%);
+          z-index: 1;
+        }
+
+        .bw-line-container {
+          position: relative;
+          display: inline-block;
+        }
+
+        .bw-line-hr {
+            width: 70%;
+            height: 1px;
+            background: linear-gradient(
+              to right,
+              #E9E9E9 40%,
+              transparent 40% 60%,
+              #E9E9E9 60%
+            );          
+            position: absolute;
+            left: 14%;
+            right: 0;
+            top: 45%;
+            transform: translateY(-50%);
+            z-index: 1;
+          }
+  
+          .bw-line-hr-container {
+            position: relative;
+            display: inline-block;
+          }
+
+        @media screen and (max-width:768px) {
+          .s-md-text {
+            font-size: 45px;
+            line-height: 59px; 
+            letter-spacing: 0px;
+            text-align: center;
+          }
+
+          .lg-text {
+            font-size: 144px;
+            letter-spacing: -3.74px;
+            text-align: center;
+          }
+
+          .p-btn {
+            border: 1px solid #FD8C94;
+            color: #FD8C94;
+            outline: none;
+            background: transparent;
+            font-size: 15px;
+            line-height: 16px;
+            font-family: PT Sans;
+            font-weight: bold;
+            letter-spacing: 3px;
+            height: 55px;
+            padding-bottom: 0;
+          }
+
+          #just-like-old {
+            font-size: 56px;
+            line-height: 70px;
+            letter-spacing: 6px;
+          }
+
+          #ampersand {
+            justify-content: center !important;
+            position: relative;
+            z-index: 3;
+          }
+
+          #email::placeholder {
+            text-align: center;
+          }
+
+        }
+        
+        @media only screen and (min-width: 768px) {
+        }
+
+        @media screen and (max-width:336px) {
+            .s-md-text {
+              text-align: center;
+            }
+
+            .lg-text {
+                font-size: 100px; 
+                line-height: 160px; 
+                letter-spacing: 
+                -3.3px;
+            }
+
+            .p-input .p-btn {
+                padding-left: 10px;
+            }
+          }
+
+        .button-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .button-wrapper button{
+          margin: 10px;
+        }
+
+        .m-btn {
+          border: 1px solid #FD8C94;
+          color: #FD8C94;
+          outline: none;
+          background: transparent;
+          font-size: 24px;
+          line-height: 32px;
+          font-family: PT Sans;
+          font-weight: bold;
+          letter-spacing: 3px;
+          height: 55px;
+          width: 155px;
+        }
+
+        .m-btn:hover{
+            background-color: #fd8c94;
+            color: white;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            text-decoration: none;
+        }
+
+        .close {
+            font-size: 50px;
+            color: #E9E9E9;
+            text-shadow: 0 1px 0 #fff;
+            opacity: 0.5;
+            background-color: transparent;
+            border: none;
+          }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: #E9E9E9">
+  <div class="button-wrapper">
+    <button id="sign-up-button" type="button" class="m-btn" data-bs-toggle="modal" data-bs-target="#sign-up-modal">
+      Sign UP!
+    </button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("sign-up-button").click();
+      });
+  </script>
+<!-- Modal -->
+<div class="modal fade" id="sign-up-modal" tabindex="-1" aria-labelledby="signUpModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="--bs-modal-width: 680px;">
+    <div class="modal-content">
+      <div class="container">
+      <div class="row d-none d-md-flex">
+        <div class="col-md-1" style="border-right: 1px solid #FD8C94; padding-bottom: 80px;"></div>
+        <div class="col-md"></div>
+        <div class="col-md-1 d-flex justify-content-center align-items-center" style="padding-right: 30px;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+      </div>
+      <div class="row d-md-none">
+        <div class="col d-flex align-items-right" style="justify-content: right!important;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+      </div>
+      
+      <div class="row d-flex ">
+        <div class="col-md-1" style="border-right: 1px solid #E9E9E9;">
+
+        </div>
+
+        <div class="col-md-1">
+
+        </div>
+        
+        <div class="col-12 col-md-3 d-flex justify-content-center s-md-text">
+          Get Your Style On
+        </div>
+        <div id="ampersand" class="col-12 col-md-1 d-flex align-items-center bw-line-container" style="font-size: 65px; line-height: 85px; letter-spacing: 13px; color: #FD8C94;">
+          <div>
+            &
+          </div>
+          <div class="bw-line d-none d-md-block"></div>
+          <div class="bw-line-hr d-block d-md-none"></div>
+
+        </div>
+        <div id="20off" class="col-12 col-md-6 align-self-end mb-md-3">
+          <div class="row pb-md-4 justify-content-center">
+            <div class="col d-md-none"></div>
+            <div class="col lg-text align-self-center" style="line-height: 180px;">20</div>
+            <div class="col align-self-center">
+              <span class="s-md-text" style="line-height: 38px;">%</span><br>
+              <span class="s-text">OFF</span>
+            </div>
+            <div class="col d-md-none"></div>
+
+          </div>
+          
+          <div class="row">
+            <div class="col-12 col-md-8">
+              <input id="email" type="email" class="p-input col-12 pl-md-0" placeholder="Email Address" aria-label="Email address">
+            </div>
+            <div id="confirm-button-col" class="col-12 col-md-4 mt-4 mt-md-0" >
+              <button id="confirm-button" type="button" class="p-btn col-12 text-center" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#confirmation-modal">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row d-none d-md-flex">
+            <div class="col-md-1" style="border-right: 1px solid #FD8C94; padding-bottom: 80px;"></div>
+          <div class="col-md"></div>
+          <div class="col-md-1" ></div>
+        </div>
+        <div class="row d-md-none d-flex" style="padding-bottom: 33px;">
+            <div class="col-md-1"></div>
+            <div class="col-md"></div>
+            <div class="col-md-1" ></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="confirmation-modal" tabindex="-1" aria-labelledby="confirmationModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="--bs-modal-width: 680px;">
+    <div class="modal-content">
+        <div class="container" style="border-bottom: 0;">
+            <div class="row" >
+                <div class="col-1"></div>
+                <div class="col"></div>
+                <div class="col-1 d-flex align-items-center" style="margin-right: 20px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+              </div>
+        </div>
+          
+      <div class="modal-body" style="padding: 0;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <div class="row justify-content-center" style="font-size: 65px; line-height: 85px; letter-spacing: 0px;">
+                <div id="just-like-old" class="col">
+                  Just Like Old Friends
+                </div>
+              </div>
+              <div class="row">
+                <div class="row mt-1">
+                  <div class="col d-flex align-items-center">
+                    <div class="dot" style="margin: 3px;"></div>
+                    <hr width="102px" style="color: #E9E9E9">
+                    <div class="dot" style="margin: 3px;"></div>
+                    <div class="dot" style="width: 15px; height: 15px;"></div>
+                    <div class="dot" style="margin: 3px;"></div>
+                  </div>
+                </div>
+                </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row" style="font-size: 14px; line-height: 35px; letter-spacing: 0.7px; font-family: PT Sans;">
+                    <div class="col mt-3">
+                      We'll keep you updated on any deals, news, or gossip that comes our way!
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row mt-3">
+                    <div class="col-12 col-md-4">
+                      <button type="button" class="p-btn col-12 col-md-8 text-center">Go Shop!</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer mt-md-5 mt-2" style="border-top: 0; margin-top: 50px;">
+      </div>
+    </div>
+  </div>
+
+<script>
+  $("#confirm-button").click(function() {
+    $("#sign-up-modal").modal("hide");
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
