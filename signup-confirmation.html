@@ -177,6 +177,9 @@
         }
         
         @media only screen and (min-width: 768px) {
+          #form-container > * {
+            padding-left: 0 !important;
+          }
         }
 
         @media screen and (max-width:336px) {
@@ -311,11 +314,11 @@
 
           </div>
           <form>
-          <div class="row">
+          <div id="form-container" class="row">
             <div class="col-12 col-md-8">
-              <input id="email" type="email" class="p-input col-12 pl-md-0" placeholder="Email Address" aria-label="Email address" required>
+              <input id="email" type="email" class="p-input col-12 " placeholder="Email Address" aria-label="Email address" required>
             </div>
-            <div id="confirm-button-col" class="col-12 col-md-4 mt-4 mt-md-0" >
+            <div id="confirm-button-col" class="col-12 col-md-4 mt-4 mt-md-0 d-md-flex" >
               <button id="confirm-button" type="submit" class="p-btn col-12 text-center">Sign Up</button>
             </div>
           </div>
