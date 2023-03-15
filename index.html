@@ -309,15 +309,16 @@
             <div class="col d-md-none"></div>
 
           </div>
-          
+          <form>
           <div class="row">
             <div class="col-12 col-md-8">
-              <input id="email" type="email" class="p-input col-12 pl-md-0" placeholder="Email Address" aria-label="Email address">
+              <input id="email" type="email" class="p-input col-12 pl-md-0" placeholder="Email Address" aria-label="Email address" required>
             </div>
             <div id="confirm-button-col" class="col-12 col-md-4 mt-4 mt-md-0" >
-              <button id="confirm-button" type="button" class="p-btn col-12 text-center" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#confirmation-modal">Sign Up</button>
+              <button id="confirm-button" type="submit" class="p-btn col-12 text-center">Sign Up</button>
             </div>
           </div>
+          </form>
         </div>
         </div>
         <div class="row d-none d-md-flex">
@@ -406,9 +407,13 @@
     $('.modal-backdrop').remove();
   }
 
-  $("#confirm-button").click(function() {
-    $("#sign-up-modal").modal("hide");
-    forceClose();
+  $("#confirm-button").click(function(e) {
+    if($("#email").val() != ""){
+      e.preventDefault();
+      $(".modal").modal("hide");
+      $("#confirmation-modal").modal("show");
+      forceClose();
+    }
   });
 
   $(".close").click(function() {
